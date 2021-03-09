@@ -1,0 +1,14 @@
+.vs__show-more {
+  font-size: 13px;
+  color: #000
+}
+
+.vs__show-more--href,
+.vs__show-more--link {
+  color: #3FAAF5;
+  cursor: pointer
+}
+
+.vs__show-more--link {
+  text-decoration: none
+}
