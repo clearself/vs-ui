@@ -1,15 +1,15 @@
 <template>
   <div class="main-skeleton">
-    <w-skeleton height="80px"></w-skeleton>
+    <vs-skeleton height="80px"></vs-skeleton>
     <div>
       <div class="skeleton-container">
         <div class="skeleton">
-          <w-skeleton height="300px"></w-skeleton>
+          <vs-skeleton height="300px"></vs-skeleton>
         </div>
-        <w-skeleton height="45px"></w-skeleton>
+        <vs-skeleton height="45px"></vs-skeleton>
       </div>
       <div class="skeleton-bottom">
-        <w-skeleton height="45px"></w-skeleton>
+        <vs-skeleton height="45px"></vs-skeleton>
       </div>
     </div>
   </div>
