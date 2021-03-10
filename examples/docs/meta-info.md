@@ -19,17 +19,17 @@
 export default {
     metaInfo: {
       title: 'My Example App',
-      meta: [{                
+      meta: [{
         name: 'keyWords',
         content: 'My Example App'
       }],
-      link: [{              
+      link: [{
         rel: 'asstes',
-        href: 'https://vv-ui.github.io/VV-UI/'
+        href: 'https://github.com/clearself/vs-ui/'
       }]
     }
   }
-  
+
 ```
 
 :::
@@ -63,7 +63,7 @@ export default {
       }, 2000)
     }
   }
-  
+
 ```
 
 :::
@@ -79,9 +79,8 @@ export default {
       }],
       link: [{                 // set link
         rel: 'asstes',
-        href: 'https://vv-ui.github.io/VV-UI/'
+        href: 'https://github.com/clearself/vs-ui/'
       }]
     }
   }
 </script>
-

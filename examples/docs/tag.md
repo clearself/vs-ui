@@ -35,7 +35,7 @@
 设置```closable```属性可以定义一个标签是否可移除。默认的标签移除时会附带渐变动画，它接受一个Boolean，true 为关闭。
 <div class="demo-block">
 <vs-tag
-  :key="tag"
+  :key="tag.color"
   v-for="tag in dynamicTags"
   closable
   :disable-transitions="false"
@@ -48,13 +48,13 @@ export default {
       return {
         dynamicTags: [{
            name: '标签一',
-           color: 'primary' 
+           color: 'primary'
         }, {
            name: '标签二',
-           color: 'success' 
+           color: 'success'
         }, {
            name: '标签三',
-           color: 'info'           
+           color: 'info'
         }, {
             name: '标签四',
             color: 'danger'
@@ -74,7 +74,7 @@ export default {
 ```html
 
 <vs-tag
-  :key="tag"
+  :key="tag.color"
   v-for="tag in dynamicTags"
   closable
   :disable-transitions="false"
@@ -87,13 +87,13 @@ export default {
       return {
         dynamicTags: [{
             name: '标签一',
-            color: 'primary' 
+            color: 'primary'
         }, {
            name: '标签二',
-           color: 'success' 
+           color: 'success'
         }, {
            name: '标签三',
-           color: 'info'           
+           color: 'info'
         }, {
             name: '标签四',
             color: 'danger'
