@@ -30,7 +30,7 @@
     },
     watch: {
       $route () {
-          
+
         this.isIndex = this.$route.name === 'index'
         if(this.isIndex){
             document.body.style.overflow = 'hidden'
@@ -59,7 +59,7 @@
   .bg{
       width:100%;
       height:100%;
-      background-image: url(./assets/img/BG.jpg);
+      background-image: url(./assets/img/index_bg.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100% 100%;
