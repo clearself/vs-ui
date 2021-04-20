@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <mainSkeleton v-if="!init"></mainSkeleton>
-    <div v-else>
-      <mainHeader></mainHeader>
+    <div v-else :class="{'bg':isIndex}">
+      <mainHeader :class="{'header-bg':isIndex}"></mainHeader>
       <div class="container" v-if="!isIndex">
         <sideNav class="nav"></sideNav>
         <router-view class="view"></router-view>
       </div>
+
       <router-view class="page" v-else></router-view>
-      <mainFooter v-if="!isIndex"></mainFooter>
+      <!-- <mainFooter v-if="!isIndex"></mainFooter> -->
     </div>
   </div>
 </template>
@@ -29,7 +30,13 @@
     },
     watch: {
       $route () {
+          
         this.isIndex = this.$route.name === 'index'
+        if(this.isIndex){
+            document.body.style.overflow = 'hidden'
+        }else{
+            document.body.style.overflow = 'inherit'
+        }
       }
     },
     mounted () {
@@ -49,10 +56,22 @@
 
 <style lang="less" type="text/less">
   @import "./assets/less/index";
-
+  .bg{
+      width:100%;
+      height:100%;
+      background-image: url(./assets/img/BG.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      overflow: hidden;
+      .header-bg{
+          background-color: rgba(255,255,255,.0);
+      }
+  }
   .container {
-    margin: 48px auto;
-    width: 90%;
+    margin: 0px auto;
+    width: 100%;
+    height:calc(100vh - 80px);
     background-color: #fff;
     box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
     .nav {

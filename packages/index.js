@@ -13,6 +13,9 @@ import vsAlert from './alert/index'
 import vsLoadingBar from './loading-bar/index'
 import Skeleton from './skeleton/index'
 
+import DivEditable from './div-editable/index'
+
+
 const components = [
   vsButton,
   vsRow,
@@ -21,7 +24,8 @@ const components = [
   vsShowMore,
   vsLimitTextArea,
   vsAlert,
-  Skeleton
+  Skeleton,
+  DivEditable
 ]
 
 const install = function(Vue) {
@@ -46,5 +50,6 @@ export default {
   MetaInfo,
   vsAlert,
   vsLoadingBar,
-  Skeleton
+  Skeleton,
+  DivEditable
 }

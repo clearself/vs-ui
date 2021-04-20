@@ -18,13 +18,16 @@
       align-items: center;
       height: 80px;
       justify-content: space-between;
+      a{
+          color:#fff;
+      }
     }
   }
 </style>
 <template>
   <header class="page-header" :style="$route.name === 'index' ? 'box-shadow:none' : 'box-shadow:0 10px 60px 0 rgba(29,29,31,0.07)'">
     <div class="header-container">
-      <router-link :to="{name: 'index'}"><img src="../assets/img/banner.png" width="100"></router-link>
+      <router-link :to="{name: 'index'}"><div class="icon"><i class="iconfont icon-vuejs"></i></div></router-link>
       <router-link :to="{name: 'giud'}">组件</router-link>
     </div>
   </header>
@@ -37,3 +40,9 @@
     }
   }
 </script>
+<style scoped>
+    .icon i{
+        font-size:60px;
+        color:#00965e;
+    }
+</style>

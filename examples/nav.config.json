@@ -68,6 +68,11 @@
           "path": "/limit"
         },
         {
+          "desc": "DivEditable 输入框",
+          "name": "div-editable",
+          "path": "/div-editable"
+        },
+        {
           "desc": "metaInfo 三要素",
           "name": "meta-info",
           "path": "/meta-info"
