@@ -10,14 +10,21 @@
   }
 </script>
 <style lang="less">
+   .demo-block i{
+        &:hover {
+          cursor: pointer;
+          color: rgb(92, 182, 255);
+        }
+    }
   .demo-icon .source > i {
     font-size: 24px;
     color: #8492a6;
     margin: 0 20px;
     font-size: 1.5em;
     vertical-align: middle;
+
   }
-  
+
   .demo-icon .source > button {
     margin: 0 20px;
   }
@@ -49,16 +56,23 @@
       vertical-align: middle;
       font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
       color: #99a9bf;
+      &:hover {
+        color: rgb(92, 182, 255);
+      }
     }
     i {
       display: block;
       font-size: 32px;
       margin-bottom: 15px;
       color: #3f536e;
+      &:hover {
+        color: rgb(92, 182, 255);
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
-    &:hover {
-      color: rgb(92, 182, 255);
-    }
+
   }
 </style>
 

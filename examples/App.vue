@@ -56,6 +56,9 @@
 
 <style lang="less" type="text/less">
   @import "./assets/less/index";
+  #app{
+      min-height: 100vh;
+  }
   .bg{
       width:100%;
       height:100%;

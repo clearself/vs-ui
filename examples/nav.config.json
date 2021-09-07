@@ -91,6 +91,11 @@
           "desc": "skeleton 骨架屏",
           "name": "skeleton",
           "path": "/skeleton"
+        },
+        {
+          "desc": "DragBall 悬浮球",
+          "name": "drag-ball",
+          "path": "/drag-ball"
         }
       ]
     }

@@ -1,5 +1,43 @@
 @charset "UTF-8";
+.ubs {
+	display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+	position: relative;
+}
 
+
+.ubs-con {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.ubs-ac {
+	align-items:center;
+}
+
+.ubs-ae {
+	align-items:flex-end;
+}
+
+.ubs-pc {
+	justify-content:center;
+}
+
+.ubs-pe {
+	justify-content:flex-end;
+}
+
+.ubs-pj {
+	justify-content:space-between;
+}
+
+.ubs-ver {
+	flex-direction:column;
+}
+
+.ubs-f1 {
+	flex: 1;
+}
 .vs-col-pull-0,
 .vs-col-pull-1,
 .vs-col-pull-10,
@@ -3177,7 +3215,7 @@
   height: 0;
   animation: vs-opacity 2s infinite linear
 }
-
+/* 可编辑div */
  .div-editable{
     border: 1px solid #d1dbe5;
     color: #000;
@@ -3206,3 +3244,32 @@
        display: block;
        color: #999;
   }
+  /* 悬浮球*/
+  .drag-ball {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      z-index: 99999;
+      cursor: pointer;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background-color: #3FAAF5;
+      box-shadow: 0px 0px 8px 0px rgba(0,0,0,.4), inset 0px 0px 15px 0px #3FAAF5;
+      border: solid 1px #50bfff;
+      background-size: 100% 100%;
+      overflow: hidden;
+  }
+  .drag-ball:hover{
+      background-color: #3FAAF5;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5), inset 0px 0px 15px 0px #3FAAF5;
+  }
+
+.no-copy {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
