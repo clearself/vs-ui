@@ -7,7 +7,7 @@
 
 > 在使用之前，推荐学习 `Vue` 和 `ES2015` ，并正确配置 `Node.js` v6.x 或以上版本
 
-`VS-UI` 基于 `Vue.js` 2.x+ 版本开发，所以有必要了解以下基础知识：
+`vns-ui` 基于 `Vue.js` 2.x+ 版本开发，所以有必要了解以下基础知识：
 - [Vue 组件](https://cn.vuejs.org/v2/guide/components.html)
 - [单文件组件](https://cn.vuejs.org/v2/guide/single-file-components.html)
 
@@ -31,10 +31,10 @@
 可以在项目的入口文件中引入所有组件或所需组件
 
 ```js
-import VSUI from 'vsui' // 引入组件库
-import '../node_modules/vsui/packages/theme-default/lib/index.css' // 引入样式库
+import VNSUI from 'vns-ui' // 引入组件库
+import '../node_modules/vns-ui/packages/theme-default/lib/index.css' // 引入样式库
 
-Vue.use(VSUI)
+Vue.use(VNSUI)
 ```
 
 ### 单个组件按需使用
@@ -42,7 +42,7 @@ Vue.use(VSUI)
 可以局部注册所需的组件，适用于与其他框架组合使用的场景
 
 ```js
-import {vsButton } from 'vsui'
+import {vsButton } from 'vns-ui'
 
 export default {
   components: {
@@ -63,4 +63,4 @@ export default {
 
 ## 自定义主题
 
-`vsui` 各个组件的样式变量都存放在 `vsui/packages/theme-defualt/common/var.css` 文件中。用户可根据实际需要，自定义组件的样式
+`vns-ui` 各个组件的样式变量都存放在 `vns-ui/packages/theme-defualt/common/var.css` 文件中。用户可根据实际需要，自定义组件的样式
