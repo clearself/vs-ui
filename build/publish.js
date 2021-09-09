@@ -1,7 +1,4 @@
-/**
- * @author monkeywang
- * Date: 17/11/22
- */
+
 require('./check-versions')();
 require('shelljs/global');
 var process = require('child_process');
@@ -28,7 +25,8 @@ inquirer.prompt([{
   default: ''
 }]).then(function (answers) {
   let build = answers.conform ? 'npm run build &&' : '';
-  var cmd = `${build} git checkout -b gh-page && rm -rf index.html && rm -rf static && cd dist && mv * ../ && rm -rf ./dist && cd .. && git add . && git commit -m '${answers.message}' && git push origin gh-page`;
+  //  git checkout -b gh-page &&
+  var cmd = `${build} rm -rf index.html && rm -rf static && cd dist && mv * ../ && rm -rf ./dist && cd .. && git add . && git commit -m '${answers.message}' && git push origin master`;
   console.log(cmd)
   process.exec(cmd, function(error, stdout, stderr) {
 			console.log(chalk.green(`success`));

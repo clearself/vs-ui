@@ -1,14 +1,14 @@
 {
-  "name": "vsui",
-  "version": "1.0.0",
+  "name": "vns-ui",
+  "version": "1.0.2",
   "description": "This is a UI components for Vue 2.x ",
-  "author": "leak",
+  "author": "fu",
   "main": "packages/index.js",
   "private": false,
   "scripts": {
     "tag": "node build/tag.js",
-    "publish": "node build/publish.js",
     "dev": "node build/dev-server.js",
+    "publish": "node build/publish.js",
     "start": "npm run dev",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
