@@ -8,14 +8,14 @@
         <h4>绑定数据 content :</h4>
         <div style="height:24px;" v-html=content></div >
     </div>
-    <div-editable v-model="content" placeholder="请输入内容" @input="changeFun" @blur="blur"></div-editable>
+    <vs-div-editable v-model="content" placeholder="请输入内容" @input="changeFun" @blur="blur"></vs-div-editable>
     <vs-button style="margin-top:10px;" size="small" @click="sure" type="primary">清空</vs-button>
 </div>
 
 
 ::: demo
 ```html
-<!-- <div-editable v-model="content" placeholder="请输入内容" @input="changeFun" @blur="blur"></div-editable> -->
+<vs-div-editable v-model="content" placeholder="请输入内容" @input="changeFun" @blur="blur"></vs-div-editable>
 
 <script>
     export default {

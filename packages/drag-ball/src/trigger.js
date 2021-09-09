@@ -57,7 +57,11 @@ const trigger = (elem,event) => {
     } else {
     var evt = document.createEvent("Events");
         evt.initEvent(event,true,true);
-        elem.dispatchEvent(evt);
+		if(elem){
+			elem.dispatchEvent(evt);
+		}
+		
+        
     }
 }
 export default trigger

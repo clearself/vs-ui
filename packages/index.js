@@ -2,7 +2,7 @@
  * @author monkeywang
  * Date: 17/11/9
  */
-import vsButton from './button/index.js';
+import vsButton from './button/index.js'
 import vsRow from './row/index'
 import vsCol from './col/index'
 import vsTag from './tag/index'
@@ -11,10 +11,12 @@ import vsLimitTextArea from './limit-textarea/index'
 import MetaInfo from './meta-info/index'
 import vsAlert from './alert/index'
 import vsLoadingBar from './loading-bar/index'
-import Skeleton from './skeleton/index'
+import vsSkeleton from './skeleton/index'
 
-import DivEditable from './div-editable/index'
-import DragBall from './drag-ball/index'
+import vsFullScreen from './full-screen/index'
+import vsDivEditable from './div-editable/index'
+import vsDragBall from './drag-ball/index'
+import vsDrag from './drag/index'
 
 const components = [
   vsButton,
@@ -24,12 +26,14 @@ const components = [
   vsShowMore,
   vsLimitTextArea,
   vsAlert,
-  Skeleton,
-  DivEditable,
-  DragBall
+  vsSkeleton,
+  vsDivEditable,
+  vsDragBall,
+  vsFullScreen,
+  vsDrag
 ]
 
-const install = function(Vue) {
+const install = function (Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
   MetaInfo.install(Vue)
@@ -51,7 +55,9 @@ export default {
   MetaInfo,
   vsAlert,
   vsLoadingBar,
-  Skeleton,
-  DivEditable,
-  DragBall
+  vsSkeleton,
+  vsDivEditable,
+  vsDragBall,
+  vsFullScreen,
+  vsDrag
 }

@@ -4,8 +4,8 @@
     <div v-else :class="{'bg':isIndex}">
       <mainHeader :class="{'header-bg':isIndex}"></mainHeader>
       <div class="container" v-if="!isIndex">
-        <sideNav class="nav"></sideNav>
-        <router-view class="view"></router-view>
+        <sideNav class="nav" :class="{'moble':isMobile}"></sideNav>
+        <router-view class="view" :class="{'moble':isMobile}"></router-view>
       </div>
 
       <router-view class="page" v-else></router-view>
@@ -19,7 +19,13 @@
   import mainFooter from './components/footer.vue'
   import sideNav from './components/side-nav.vue'
   import mainSkeleton from './main.skeleton.vue'
-
+	const isMobile = () => {
+		if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+		 return true; // 移动端
+		}else{
+		 return false; // PC端
+		}
+	   }
   export default {
     name: 'app',
     data () {
@@ -28,6 +34,11 @@
         isIndex: true
       }
     },
+	computed: {
+		isMobile() {
+			return isMobile()
+		},
+	},
     watch: {
       $route () {
 
@@ -74,19 +85,29 @@
   .container {
     margin: 0px auto;
     width: 100%;
-    height:calc(100vh - 80px);
+    height: calc(100vh - 80px);
     background-color: #fff;
     box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
     .nav {
       float: left;
       width: 210px;
     }
+	.nav.moble{
+		width: 100vw;
+		overflow-x: hidden;
+		box-sizing: border-box;
+	}
     .view {
       float: left;
       width: calc(~'100% - 215px');
       padding: 32px 48px 48px;
       box-sizing: border-box;
     }
+	.view.moble{
+		width: 100vw;
+		overflow-x: hidden;
+		box-sizing: border-box;
+	}
   }
 
   .container:after {

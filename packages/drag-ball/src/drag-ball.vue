@@ -7,7 +7,7 @@
 <script>
     import trigger from './trigger.js'
 export default {
-    name: "DragBall",
+    name: "vsDragBall",
     data () {
         return {
         }
@@ -29,9 +29,9 @@ export default {
             var startLeft = 0;
             var startTop = 0;
             /*设置初始化位置*/
-            neko.style.right = '0px';
-            neko.style.bottom = '200px';
-            neko.direction = 'right'
+            neko.style.top = '0px';
+            neko.style.left = '50%';
+            neko.direction = 'top'
 
             move(neko, nekoW / 2, nekoH / 2);
             rate(neko, 0)
@@ -103,6 +103,9 @@ export default {
 
                     move(neko, 0, 0);
                 }
+				document.onmouseup = function () {
+				    document.onmousemove =document.onmouseup =  null;
+				}
             }
             neko.onmouseover = function () {
                 //console.log(this)
@@ -117,11 +120,12 @@ export default {
             }
 
             neko.onmouseup = function () {
-                document.onmousemove = null;
+                document.onmousemove =document.onmouseup =  null;
                 this.style.transition = '.5s';
                 move(this, nekoW / 2, nekoH / 2);
                 action(this);
             }
+			
 
             window.onresize = function () {
                 var bodyH = document.body.offsetHeight;
@@ -156,6 +160,7 @@ export default {
                 }
             }
             document.body.onmouseleave = function (e) {
+				document.onmousemove =document.onmouseup =  null;
                 trigger(document.querySelector('#drag-ball'),"mouseup");
             }
         }

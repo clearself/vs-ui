@@ -11,19 +11,6 @@
         </div>
         <div ref="canvasFrame" class="container-wrapper"></div>
     </div>
-  <!-- <div class="pg-index">
-    <div class="index-container">
-      <img style="width:200px" src="../assets/img/logo.png">
-      <p>一款轻量级、模块化的前端 UI 组件库</p>
-     </div>
-    <div class="separate-panel">
-      <div class="about">
-        <router-link :to="{name: 'giud'}">开始使用</router-link>
-        <a target="_blank" class="btn-github" href="https://github.com/clearself/vs-ui">GitHub</a>
-      </div>
-    </div>
-    <div ref="canvasFrame" class="container"></div>
-  </div> -->
 </template>
 
 <script>

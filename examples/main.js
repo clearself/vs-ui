@@ -9,7 +9,6 @@ import '../packages/theme-default/lib/index.css'
 require('./icon/iconfont.css')
 Vue.component('demo-block', demoBlock)
 Vue.use(VVUI)
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -4,14 +4,14 @@
 鼠标拖动悬浮球可在整个可视区范围内，并伴有边界吸附效果。
 <div class="demo-block">
     鼠标拖动悬浮球
-    <drag-ball @click="fun1">
+    <vs-drag-ball @click="fun1">
         <i class="vs-icon-remind font"></i>
-    </drag-ball>
+    </vs-drag-ball>
 </div>
 
 ::: demo
 ```html
-    <drag-ball></drag-ball>
+    <vs-drag-ball></vs-drag-ball>
 ```
 :::
 ### 自定义显示内容
@@ -21,9 +21,9 @@
 
 ::: demo
 ```html
-    <drag-ball>
+    <vs-drag-ball>
         <i class="vs-icon-remind font"></i>
-    </drag-ball>
+    </vs-drag-ball>
     .font{
         font-size:30px;
         color:#fff;

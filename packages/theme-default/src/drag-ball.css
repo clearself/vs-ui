@@ -1,25 +1,30 @@
-.drag-ball {
-    width: 60px;
-    height: 60px;
-    display: box;
-    box-align: center;
-    box-pack: center;
-    position: fixed;
-    z-index: 99999;
-    cursor: pointer;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #111b25;
-    box-shadow: 0px 0px 12px 0px #000000, inset 0px 0px 27px 0px #2495ff;
-    border: solid 1px #61ffff;
-    background-size: 100% 100%;
-    overflow: hidden;
-}
-.drag-ball:hover{
-    background-color: #244362;
-    box-shadow: 0px 0px 12px 0px #000000, inset 0px 0px 27px 0px #2495ff;
-}
-.chat-ball{
-    color: white;
-    font-size: 30px;
+
+/* 悬浮球*/
+  .drag-ball {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      z-index: 99999;
+      cursor: pointer;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background-color: #3FAAF5;
+      box-shadow: 0px 0px 8px 0px rgba(0,0,0,.4), inset 0px 0px 15px 0px #3FAAF5;
+      border: solid 1px #50bfff;
+      background-size: 100% 100%;
+      overflow: hidden;
+  }
+  .drag-ball:hover{
+      background-color: #3FAAF5;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5), inset 0px 0px 15px 0px #3FAAF5;
+  }
+
+.no-copy {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }

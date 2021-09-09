@@ -96,6 +96,16 @@
           "desc": "DragBall 悬浮球",
           "name": "drag-ball",
           "path": "/drag-ball"
+        },
+      {
+          "desc": "FullScreen 全屏容器",
+          "name": "full-screen",
+          "path": "/full-screen"
+      },
+        {
+            "desc": "Drag 拖拽框",
+            "name": "drag",
+            "path": "/drag"
         }
       ]
     }

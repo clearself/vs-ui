@@ -16,7 +16,7 @@
 <script>
    import EventUtil from './EventUtil.js'
   export default {
-    name: 'DivEditable',
+    name: 'vsDivEditable',
     props: {
         value: {
            type: String,
