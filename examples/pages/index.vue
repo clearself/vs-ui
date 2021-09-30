@@ -2,11 +2,11 @@
     <div>
         <div class="ub ub-ac ub-pc ub-ver btn-wrapper">
             <div class="doc-desc">
-                 <p>一款轻量级、模块化的前端 UI 组件库</p>
+                 <p :class="{'moble':isMobile}">一款轻量级、模块化的前端 UI 组件库</p>
             </div>
             <div class="btn-box">
-               <router-link :to="{name: 'giud'}">开始使用</router-link>
-               <a target="_blank" class="btn-github" href="https://github.com/clearself/vs-ui">GitHub</a>
+               <router-link :class="{'moble':isMobile}" :to="{name: 'giud'}">开始使用</router-link>
+               <a :class="{'moble':isMobile}" target="_blank" class="btn-github" href="https://github.com/clearself/vs-ui">GitHub</a>
             </div>
         </div>
         <div ref="canvasFrame" class="container-wrapper"></div>
@@ -14,6 +14,13 @@
 </template>
 
 <script>
+    const isMobile = () => {
+    	if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+    	 return true; // 移动端
+    	}else{
+    	 return false; // PC端
+    	}
+       }
     var SEPARATION = 100,
     	AMOUNTX = 50,
     	AMOUNTY = 50;
@@ -34,6 +41,11 @@
         height: document.documentElement.clientHeight
       }
     },
+	computed: {
+		isMobile() {
+			return isMobile()
+		},
+	},
     mounted() {
     	this.$nextTick(() => {
     		onOff = false;
@@ -165,6 +177,9 @@
            p{
                font-size:28px;
                color:#fff;
+               &.moble{
+                   font-size: 20px;
+               }
            }
        }
        .btn-box{
@@ -184,6 +199,13 @@
            border-radius: 28px;
            transition: all .3s;
            cursor: pointer;
+           &.moble{
+               width: 150px;
+               height: 30px;
+               line-height: 30px;
+               font-size: 14px;
+               margin-top: 20px;
+           }
          }
          a:hover{
            box-shadow: 0 2px 6px 0 rgba(51,105,231,0.4);
@@ -193,6 +215,7 @@
            border: 1px solid #2F6EE9;
            background: #fff;
            box-shadow: none;
+
          }
        }
     }
