@@ -58,6 +58,8 @@
       </div>
       <div style="overflow: hidden;">
           <router-link class="link active" :to="{name: 'giud'}">组件</router-link>
+          <a class="link" target="_blank" href="https://clearself.github.io/">微前端</a>
+          <a class="link" target="_blank" href=" https://clearself.github.io/scan/">H5扫一扫</a>
           <a class="link" target="_blank" href="https://www.showdoc.com.cn/998330411274906/7518571525063957">干货分享</a>
           <a class="link" target="_blank" href="https://ysc.dnscn.site/#/login">易收藏</a>
           <a class="link" target="_blank" href="https://ysc.dnscn.site/#/login">话题</a>
